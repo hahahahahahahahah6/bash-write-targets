@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bash-write-targets"
+version = "0.1.0"
+description = "Statically list the file-write targets of a bash command (redirects, tee, -o flags, cp/mv destinations)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "hao li" }]
+keywords = ["bash", "shell", "static-analysis", "security", "ai-agents", "audit"]
+
+[project.scripts]
+targets = "bash_write_targets.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/bash-write-targets"
+
+[tool.setuptools.packages.find]
+where = ["src"]
